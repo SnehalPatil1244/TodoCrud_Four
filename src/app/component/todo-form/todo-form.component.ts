@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Itodo } from 'src/app/model/todo';
-import { UuidService } from 'src/app/services/uuid.service';
+import { Itodo } from '../../model/todo';
+import { UuidService } from '../../services/uuid.service';
 
 @Component({
   selector: 'app-todo-form',
