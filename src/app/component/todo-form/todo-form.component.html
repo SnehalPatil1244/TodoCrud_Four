@@ -1,0 +1,11 @@
+<form #TodoForm="ngForm" (ngSubmit)="onTodoSubmit()" class="mt-5">
+    <div class="card-body">
+        <div class="form-group">
+            <label for="title">Todo Item</label>
+            <input type="text" ngModel name="title" required class="form-control">
+        </div>
+        <button *ngIf="!isInEditMode" mat-raised-button color="primary" class="w-100">Add Todo</button>
+        <button  (click)="onUpdate()" ctype="button" *ngIf="isInEditMode" mat-raised-button color="primary" class="w-100">Update Todo</button>
+    </div>
+
+</form>

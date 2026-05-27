@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-md-6">
+        <app-todo-form
+        (emitupdateobj)="onupdatetodo($event)"
+        [emitedittotos]="geteditdata"
+        (emitnewtodo)="onaddtodo($event)"
+        ></app-todo-form>
+    </div>
+    <div class="col-md-6">
+        <app-todo-card
+        (emiteditobj)="onedittodo($event)"
+        (getremoveid)="onremovetodo($event)"
+        [gettodos]="todoArr"
+        ></app-todo-card>
+    </div>
+</div>

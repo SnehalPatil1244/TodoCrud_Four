@@ -1,0 +1,12 @@
+<ul class="list-group mt-5" *ngIf="gettodos.length > 0; else notodo">
+    <li class="list-group-item d-flex justify-content-between text-align-center" *ngFor="let todo of gettodos; trackBy : TrackByfunc">
+        <strong>{{todo.title}}</strong>
+        <div>
+            <button (click)="onEdit(todo)"  mat-mini-fab color="primary" class="mr-2"><mat-icon>edit</mat-icon></button>
+            <button (click)="onRemove(todo.todoid)" mat-mini-fab color="warn"><mat-icon>delete</mat-icon></button>
+        </div>
+    </li>
+</ul>
+<ng-template #notodo>
+    <p class="alert alert-info">No Data Added Yet !!</p>
+</ng-template>
