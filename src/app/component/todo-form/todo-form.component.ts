@@ -34,8 +34,9 @@ isInEditMode : boolean = false
       this.TodoForm.reset()
       this.emitnewtodo.emit(todo)
     }
-
   }
+
+
   onUpdate(){
     if(this.TodoForm.valid){
       let updatedobj : Itodo = {
