@@ -15,7 +15,7 @@ isInEditMode : boolean = false
 @Output() emitupdateobj : EventEmitter<Itodo> = new EventEmitter<Itodo>()
 @ViewChild('TodoForm') TodoForm !: NgForm
 
-  constructor(private uuid : UuidService) { }
+  constructor(private uuidService : UuidService) { }
 
   ngOnChanges(changes: SimpleChanges): void {
    if(changes['emitedittotos'].currentValue){
@@ -29,7 +29,7 @@ isInEditMode : boolean = false
   onTodoSubmit(){
     if(this.TodoForm.valid){
       let todo : Itodo = {
-        ...this.TodoForm.value, todoid : this.uuid.uuid()
+        ...this.TodoForm.value, todoid : this.uuidService.uuid()
       }
       this.TodoForm.reset()
       this.emitnewtodo.emit(todo)
